@@ -1,0 +1,62 @@
+.product-grid {
+  width: min(100%, 75rem);
+  margin-inline: auto;
+  padding: 1.5rem 1rem;
+
+  &--feedback {
+    min-height: 16rem;
+    display: grid;
+    align-content: center;
+    text-align: center;
+  }
+
+  &__header {
+    margin-bottom: 1.5rem;
+  }
+
+  &__title {
+    margin: 0;
+    color: #111827;
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.2;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  &__item {
+    min-width: 0;
+  }
+
+  &__message {
+    margin: 0.75rem 0 0;
+    color: #4b5563;
+    font-size: 1rem;
+
+    &--error {
+      color: #b91c1c;
+      font-weight: 700;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    padding-inline: 1.5rem;
+
+    &__list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    padding-block: 2rem;
+
+    &__list {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+  }
+}
