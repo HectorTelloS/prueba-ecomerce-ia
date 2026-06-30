@@ -1,0 +1,33 @@
+@use './variables' as *;
+
+@mixin page-container {
+  margin: 0 auto;
+  max-width: 72rem;
+  padding-left: $space-4;
+  padding-right: $space-4;
+}
+
+@mixin button-base {
+  align-items: center;
+  border-radius: $radius-md;
+  display: inline-flex;
+  font: inherit;
+  font-weight: 800;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0 $space-4;
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == 'tablet' {
+    @media (min-width: 48rem) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 'desktop' {
+    @media (min-width: 64rem) {
+      @content;
+    }
+  }
+}
