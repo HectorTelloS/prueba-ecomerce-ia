@@ -1,0 +1,49 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.home-page {
+  @include page-container;
+  padding-bottom: $space-8;
+  padding-top: $space-6;
+
+  &__hero {
+    background: linear-gradient(135deg, rgba($color-primary, 0.12), rgba($color-accent, 0.16));
+    border-radius: $radius-xl;
+    margin-bottom: $space-6;
+    padding: $space-6;
+  }
+
+  &__eyebrow {
+    color: $color-primary;
+    font-weight: 800;
+    margin: 0 0 $space-2;
+  }
+
+  &__title {
+    font-size: clamp(2rem, 8vw, 4rem);
+    line-height: 1;
+    margin: 0;
+    max-width: 52rem;
+  }
+
+  &__description {
+    color: $color-text-muted;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: $space-4 0 0;
+    max-width: 44rem;
+  }
+
+  &__subtitle {
+    font-size: 1.6rem;
+    margin: 0 0 $space-4;
+  }
+
+  &__error {
+    background: #fff1f2;
+    border: 0.0625rem solid #fecdd3;
+    border-radius: $radius-md;
+    color: #be123c;
+    padding: $space-4;
+  }
+}

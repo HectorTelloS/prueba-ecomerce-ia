@@ -1,0 +1,14 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.footer {
+  @include page-container;
+  color: $color-text-muted;
+  padding-bottom: $space-6;
+  padding-top: $space-6;
+  text-align: center;
+
+  &__text {
+    margin: 0;
+  }
+}
