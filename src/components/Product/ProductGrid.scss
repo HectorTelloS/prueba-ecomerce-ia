@@ -1,0 +1,27 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @media (min-width: 48rem) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: 64rem) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.product-grid-state {
+  padding: 2rem 1rem;
+  text-align: center;
+
+  &__message {
+    margin: 0;
+    color: #475569;
+
+    &--error {
+      color: #b91c1c;
+    }
+  }
+}
